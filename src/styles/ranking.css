@@ -1,0 +1,237 @@
+.head-filter-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.head-filter-grid button {
+  padding: 13px 8px;
+  border: 1px solid rgba(148, 163, 184, 0.24);
+  border-radius: 14px;
+  background: #020617;
+  color: #cbd5e1;
+  font-size: 14px;
+  font-weight: 950;
+  cursor: pointer;
+}
+
+.head-filter-grid button.active {
+  border-color: #38bdf8;
+  background: linear-gradient(
+    135deg,
+    rgba(14, 165, 233, 0.34),
+    rgba(59, 130, 246, 0.2)
+  );
+  color: #f8fafc;
+  box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.12);
+}
+
+.ranking-list {
+  display: grid;
+  gap: 14px;
+}
+
+.ranking-item {
+  display: grid;
+  grid-template-columns: 64px 1fr;
+  gap: 14px;
+  padding: 16px;
+  border-radius: 22px;
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.96), rgba(2, 6, 23, 0.9));
+  border: 1px solid rgba(148, 163, 184, 0.22);
+}
+
+.ranking-rank {
+  display: grid;
+  place-items: center;
+  align-self: start;
+  width: 56px;
+  height: 56px;
+  border-radius: 17px;
+  background: linear-gradient(135deg, #ef4444, #f97316);
+  color: #fff;
+  font-size: 23px;
+  font-weight: 1000;
+  box-shadow: 0 10px 24px rgba(239, 68, 68, 0.24);
+}
+
+.ranking-rank.gold {
+  background: linear-gradient(135deg, #facc15, #f59e0b);
+  color: #111827;
+}
+
+.ranking-rank.silver {
+  background: linear-gradient(135deg, #f8fafc, #94a3b8);
+  color: #111827;
+}
+
+.ranking-rank.bronze {
+  background: linear-gradient(135deg, #fb923c, #b45309);
+  color: #fff;
+}
+
+.ranking-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.ranking-main span {
+  min-width: 64px;
+  text-align: right;
+  color: #93c5fd;
+  font-size: 18px;
+  font-weight: 1000;
+}
+
+.combo-display {
+  display: flex;
+  gap: 9px;
+  align-items: center;
+}
+
+.boat-circle {
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 999px;
+  font-size: 24px;
+  font-weight: 1000;
+  border: 3px solid rgba(255, 255, 255, 0.48);
+  box-shadow:
+    0 8px 18px rgba(0, 0, 0, 0.42),
+    inset 0 2px 8px rgba(255, 255, 255, 0.22);
+  text-shadow:
+    0 1px 0 rgba(0, 0, 0, 0.6),
+    0 0 6px rgba(0, 0, 0, 0.45);
+}
+
+.lane-circle-1 {
+  background: linear-gradient(135deg, #ffffff, #e5e7eb);
+  color: #111827;
+  text-shadow: none;
+}
+
+.lane-circle-2 {
+  background: linear-gradient(135deg, #64748b, #020617);
+  color: #ffffff;
+  border-color: rgba(226, 232, 240, 0.75);
+}
+
+.lane-circle-3 {
+  background: linear-gradient(135deg, #ff4b4b, #b91c1c);
+  color: #ffffff;
+}
+
+.lane-circle-4 {
+  background: linear-gradient(135deg, #60a5fa, #1d4ed8);
+  color: #ffffff;
+}
+
+.lane-circle-5 {
+  background: linear-gradient(135deg, #fde047, #ca8a04);
+  color: #111827;
+  text-shadow: none;
+}
+
+.lane-circle-6 {
+  background: linear-gradient(135deg, #4ade80, #15803d);
+  color: #ffffff;
+}
+
+.ranking-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 9px;
+}
+
+.ranking-stats div {
+  min-height: 76px;
+  padding: 13px 10px;
+  border-radius: 15px;
+  background: rgba(15, 23, 42, 0.92);
+  border: 1px solid rgba(148, 163, 184, 0.12);
+}
+
+.ranking-stats small {
+  display: block;
+  margin-bottom: 7px;
+  color: #93c5fd;
+  font-size: 11px;
+  font-weight: 900;
+}
+
+.ranking-stats b {
+  color: #f8fafc;
+  font-size: 16px;
+  font-weight: 1000;
+}
+
+@media (max-width: 640px) {
+  .head-filter-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .ranking-item {
+    grid-template-columns: 46px 1fr;
+    gap: 8px;
+    padding: 10px;
+  }
+
+  .ranking-rank {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    font-size: 19px;
+  }
+
+  .ranking-main {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+
+  .combo-display {
+    gap: 5px;
+  }
+
+  .boat-circle {
+    width: 37px;
+    height: 37px;
+    font-size: 20px;
+    border-width: 2px;
+  }
+
+  .ranking-main span {
+    font-size: 15px;
+    min-width: 48px;
+  }
+
+  .ranking-stats {
+    grid-column: 2;
+    width: 100%;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 6px;
+  }
+
+  .ranking-stats div {
+    min-height: 70px;
+    padding: 9px 4px;
+    border-radius: 12px;
+    text-align: center;
+  }
+
+  .ranking-stats small {
+    font-size: 10px;
+    white-space: nowrap;
+  }
+
+  .ranking-stats b {
+    font-size: 13px;
+    white-space: nowrap;
+  }
+}
