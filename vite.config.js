@@ -3,6 +3,8 @@ import react from "@vitejs/plugin-react";
 import { VitePWA } from "vite-plugin-pwa";
 
 export default defineConfig({
+  base: "/head-sniper/",
+
   plugins: [
     react(),
 
@@ -18,8 +20,8 @@ export default defineConfig({
         background_color: "#020617",
 
         display: "standalone",
-        start_url: "/",
-        scope: "/",
+        start_url: "/head-sniper/",
+        scope: "/head-sniper/",
 
         icons: [
           {
