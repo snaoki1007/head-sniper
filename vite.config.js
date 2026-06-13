@@ -15,26 +15,22 @@ export default defineConfig({
         name: "HEAD SNIPER",
         short_name: "HEAD SNIPER",
         description: "戸田競艇予想アプリ",
-
         theme_color: "#020617",
         background_color: "#020617",
-
         display: "standalone",
         start_url: "/head-sniper/",
         scope: "/head-sniper/",
 
         icons: [
           {
-            src: "favicon.svg",
+            src: "icon-192.png",
             sizes: "192x192",
-            type: "image/svg+xml",
-            purpose: "any",
+            type: "image/png",
           },
           {
-            src: "favicon.svg",
+            src: "icon-512.png",
             sizes: "512x512",
-            type: "image/svg+xml",
-            purpose: "any",
+            type: "image/png",
           },
         ],
       },

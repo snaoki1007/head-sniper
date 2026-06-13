@@ -11,14 +11,22 @@ function App() {
   const [page, setPage] = useState("predict");
 
   useEffect(() => {
-    fetch("/toda_light_with_payout.csv")
-      .then((res) => res.text())
+    const csvPath = `${import.meta.env.BASE_URL}toda_light_with_payout.csv`;
+
+    fetch(csvPath)
+      .then((res) => {
+        if (!res.ok) {
+          throw new Error(`CSV取得失敗: ${res.status}`);
+        }
+        return res.text();
+      })
       .then((csv) => {
         const result = Papa.parse(csv, {
           header: true,
           skipEmptyLines: true,
         });
 
+        console.log("CSV Rows:", result.data.length);
         setData(result.data);
       })
       .catch((err) => {
